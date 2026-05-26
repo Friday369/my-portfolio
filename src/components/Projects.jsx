@@ -8,10 +8,10 @@ const projects = [
   },
   {
     num: '02',
-    title: 'Your Next Project',
-    desc: 'Add your Day 2 project here. Describe what it does and what you learned.',
+    title: 'Expense Tracker',
+    desc: 'A simple expense tracker built with React and Node.js that allows users to log and categorize their expenses.',
     tags: ['React', 'Node.js'],
-    link: '#',
+    link: 'https://expense-tracker-fawn-zeta-81.vercel.app/',
   },
 ]
 
