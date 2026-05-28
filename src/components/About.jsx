@@ -27,7 +27,7 @@ export default function About() {
 }
 
 const s = {
-  section: { maxWidth: '1000px', margin: '0 auto', padding: '5rem 2.5rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' },
+  section: { margin: '0 auto', padding: '5rem 4rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' },
   left: {},
   title: { fontSize: '2.5rem', fontWeight: 800, color: '#0a0a0a', letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: '1.2rem' },
   highlight: { background: '#ff6b4a', color: '#fff', padding: '0 6px' },

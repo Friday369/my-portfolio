@@ -54,7 +54,7 @@ export default function Projects() {
 }
 
 const s = {
-  section: { maxWidth: '1000px', margin: '0 auto', padding: '5rem 2.5rem' },
+  section: { margin: '0 auto', padding: '5rem 4rem' },
   header: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2.5rem', paddingBottom: '1rem', borderBottom: '2px solid #0a0a0a' },
   label: { fontFamily: "'Space Mono', monospace", fontSize: '0.65rem', color: '#888', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.4rem' },
   title: { fontSize: '2rem', fontWeight: 800, color: '#0a0a0a', letterSpacing: '-1px' },

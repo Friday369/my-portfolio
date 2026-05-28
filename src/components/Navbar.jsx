@@ -14,7 +14,7 @@ export default function Navbar() {
 }
 
 const s = {
-  nav: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.2rem 2.5rem', background: 'rgba(245,240,232,0.97)', borderBottom: '2px solid #0a0a0a', position: 'sticky', top: 0, zIndex: 100, backdropFilter: 'blur(10px)' },
+  nav: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.2rem 4rem', background: 'rgba(245,240,232,0.97)', borderBottom: '2px solid #0a0a0a', position: 'sticky', top: 0, zIndex: 100, backdropFilter: 'blur(10px)', width: '100%', boxSizing: 'border-box' },
   logo: { fontFamily: "'Space Mono', monospace", fontSize: '0.82rem', fontWeight: 700, color: '#0a0a0a', letterSpacing: '0.05em' },
   links: { display: 'flex', gap: '2rem', alignItems: 'center' },
   link: { fontSize: '0.8rem', color: '#0a0a0a', textDecoration: 'none', fontWeight: 500 },

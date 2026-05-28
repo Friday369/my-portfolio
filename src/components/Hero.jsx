@@ -22,7 +22,7 @@ export default function Hero() {
 }
 
 const s = {
-  hero: { padding: '4rem 2.5rem 0', maxWidth: '1000px', margin: '0 auto' },
+  hero: { padding: '4rem 4rem 0', margin: '0 auto' },
   tag: { display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#0a0a0a', color: '#f5f0e8', fontFamily: "'Space Mono', monospace", fontSize: '0.68rem', padding: '0.4rem 1rem', marginBottom: '2rem', letterSpacing: '0.1em' },
   dot: { width: '6px', height: '6px', borderRadius: '50%', background: '#4ade80', display: 'inline-block', flexShrink: 0 },
   title: { fontSize: 'clamp(3.5rem, 9vw, 7rem)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-3px', color: '#0a0a0a', marginBottom: '1rem' },

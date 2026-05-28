@@ -46,8 +46,7 @@ export default function Skills() {
 }
 
 const s = {
-  section: { background: '#4361ee', borderTop: '2px solid #0a0a0a', borderBottom: '2px solid #0a0a0a', padding: '5rem 2.5rem' },
-  inner: { maxWidth: '1000px', margin: '0 auto' },
+  section: { background: '#4361ee', borderTop: '2px solid #0a0a0a', borderBottom: '2px solid #0a0a0a', padding: '5rem 4rem' },
   title: { fontSize: '2rem', fontWeight: 800, color: '#fff', letterSpacing: '-1px', marginBottom: '2.5rem' },
   grid: { display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1px', background: '#fff' },
   col: { background: '#4361ee', padding: '2rem' },

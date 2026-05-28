@@ -8,7 +8,7 @@ import About from './components/About'
 
 export default function App() {
   return (
-    <div style={{ background: '#f5f0e8', minHeight: '100vh', fontFamily: "'Bricolage Grotesque', sans-serif" }}>
+    <div style={{ background: '#f5f0e8', minHeight: '100vh', fontFamily: "'Bricolage Grotesque', sans-serif", overflowX: 'hidden' }}>
       <Navbar />
       <Hero />
       <Ticker />
