@@ -1,31 +1,36 @@
 export default function Hero() {
   return (
-    <section style={styles.hero}>
-      <p style={styles.tag}>🟢 Open to opportunities</p>
-      <h1 style={styles.h1}>
-        Hi, I'm <span style={styles.accent}>C S NarendraVignesh</span>
+    <section style={s.hero}>
+      <div style={s.tag}>
+        <span style={s.dot}></span>
+        Available for work · India · Remote
+      </div>
+      <h1 style={s.title}>
+        I Build<br />
+        Things <span style={s.yellow}>For</span><br />
+        The <span style={s.coral}>Web.</span>
       </h1>
-      <p style={styles.subtitle}>Frontend Developer · React & Node.js</p>
-      <p style={styles.desc}>
-        I build clean, fast, user-friendly web apps. Currently learning and
-        growing every day — open to internships and junior roles.
-      </p>
-      <div style={styles.btnRow}>
-        <a href="#projects" style={styles.btnPrimary}>View My Work</a>
-        <a href="/resume.pdf" download style={styles.btnGhost}>Download Resume</a>
+      <div style={s.bottom}>
+        <p style={s.desc}>Frontend developer focused on React & Node.js. I build fast, clean, production-ready apps that work beautifully and ship on time.</p>
+        <div style={s.btns}>
+          <a href="#projects" style={s.btnA}>View My Work ↓</a>
+          <a href="#contact" style={s.btnB}>Get In Touch</a>
+        </div>
       </div>
     </section>
   )
 }
 
-const styles = {
-  hero: { padding: '6rem 2rem 4rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' },
-  tag: { fontSize: '0.85rem', color: '#8b82d4', marginBottom: '1.5rem' },
-  h1: { fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2.5rem, 6vw, 4rem)', color: '#f0eeff', margin: '0 0 0.5rem', lineHeight: 1.1 },
-  accent: { color: '#9b8de8', fontStyle: 'italic' },
-  subtitle: { fontSize: '1.1rem', color: '#6a6688', margin: '0 0 1rem' },
-  desc: { fontSize: '1rem', color: '#8480a8', lineHeight: 1.8, maxWidth: '500px', margin: '0 0 2rem', fontWeight: 300 },
-  btnRow: { display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' },
-  btnPrimary: { background: '#6b59d4', color: '#fff', padding: '0.8rem 2rem', borderRadius: '6px', textDecoration: 'none', fontSize: '0.9rem' },
-  btnGhost: { background: 'transparent', color: '#9490b0', border: '0.5px solid #3d3670', padding: '0.8rem 2rem', borderRadius: '6px', textDecoration: 'none', fontSize: '0.9rem' },
+const s = {
+  hero: { padding: '4rem 2.5rem 0', maxWidth: '1000px', margin: '0 auto' },
+  tag: { display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#0a0a0a', color: '#f5f0e8', fontFamily: "'Space Mono', monospace", fontSize: '0.68rem', padding: '0.4rem 1rem', marginBottom: '2rem', letterSpacing: '0.1em' },
+  dot: { width: '6px', height: '6px', borderRadius: '50%', background: '#4ade80', display: 'inline-block', flexShrink: 0 },
+  title: { fontSize: 'clamp(3.5rem, 9vw, 7rem)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-3px', color: '#0a0a0a', marginBottom: '1rem' },
+  yellow: { background: '#ffe033', padding: '0 8px' },
+  coral: { background: '#ff6b4a', color: '#fff', padding: '0 8px' },
+  bottom: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: '2rem 0', borderTop: '2px solid #0a0a0a', marginTop: '2rem', flexWrap: 'wrap', gap: '1rem' },
+  desc: { fontSize: '0.9rem', color: '#444', lineHeight: 1.8, maxWidth: '380px', fontWeight: 400 },
+  btns: { display: 'flex', gap: '10px', flexWrap: 'wrap' },
+  btnA: { background: '#ffe033', color: '#0a0a0a', border: '2px solid #0a0a0a', padding: '0.8rem 2rem', fontSize: '0.85rem', fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 700, cursor: 'pointer', textDecoration: 'none' },
+  btnB: { background: 'transparent', color: '#0a0a0a', border: '2px solid #0a0a0a', padding: '0.8rem 2rem', fontSize: '0.85rem', fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 600, cursor: 'pointer', textDecoration: 'none' },
 }

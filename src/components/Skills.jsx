@@ -1,35 +1,58 @@
-const skills = [
-  { icon: '⚛️', name: 'React',      level: 'Learning' },
-  { icon: '🟨', name: 'JavaScript', level: 'Intermediate' },
-  { icon: '🟢', name: 'Node.js',    level: 'Learning' },
-  { icon: '🎨', name: 'CSS',        level: 'Intermediate' },
-  { icon: '🐙', name: 'Git',        level: 'Learning' },
-  { icon: '🗃️', name: 'HTML',       level: 'Solid' },
+const technical = [
+  { name: 'React', level: 'med' }, { name: 'Node.js', level: 'med' },
+  { name: 'Express', level: 'med' }, { name: 'MongoDB', level: 'med' },
+  { name: 'CSS / HTML', level: 'high' }, { name: 'Git', level: 'med' },
 ]
+const languages = [
+  { name: 'JavaScript', level: 'high' }, { name: 'Python', level: 'med' },
+  { name: 'C++', level: 'med' }, { name: 'HTML', level: 'high' },
+  { name: 'CSS', level: 'high' }, { name: 'SQL', level: 'low' },
+]
+const soft = [
+  { name: 'Teamwork', level: 'high' }, { name: 'Communication', level: 'high' },
+  { name: 'Polyglot', level: 'high' }, { name: 'Fast Learner', level: 'high' },
+  { name: 'Problem Solving', level: 'high' }, { name: 'Ship Mindset', level: 'high' },
+]
+
+const dotColor = (l) => l === 'high' ? '#ffe033' : l === 'med' ? 'rgba(255,255,255,0.4)' : 'rgba(255,255,255,0.15)'
+
+function SkillCol({ title, items }) {
+  return (
+    <div style={s.col}>
+      <div style={s.colTitle}>{title}</div>
+      {items.map(i => (
+        <div key={i.name} style={s.row}>
+          <span style={s.name}>{i.name}</span>
+          <span style={{ ...s.dot, background: dotColor(i.level) }}></span>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export default function Skills() {
   return (
-    <section style={styles.section}>
-      <p style={styles.label}>Skills & Tools</p>
-      <div style={styles.grid}>
-        {skills.map((s) => (
-          <div key={s.name} style={styles.card}>
-            <div style={styles.icon}>{s.icon}</div>
-            <div style={styles.name}>{s.name}</div>
-            <div style={styles.level}>{s.level}</div>
-          </div>
-        ))}
+    <section id="skills" style={s.section}>
+      <div style={s.inner}>
+        <div style={s.title}>Skills & Tools</div>
+        <div style={s.grid}>
+          <SkillCol title="Technical" items={technical} />
+          <SkillCol title="Languages" items={languages} />
+          <SkillCol title="Soft Skills" items={soft} />
+        </div>
       </div>
     </section>
   )
 }
 
-const styles = {
-  section: { padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto' },
-  label: { fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#5a5678', marginBottom: '2rem' },
-  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '12px' },
-  card: { background: '#13121f', border: '0.5px solid #2a2840', borderRadius: '10px', padding: '1.2rem 1rem', textAlign: 'center' },
-  icon: { fontSize: '1.6rem', marginBottom: '0.5rem' },
-  name: { fontSize: '0.85rem', color: '#b0aacf', fontWeight: 500 },
-  level: { fontSize: '0.72rem', color: '#5a5678', marginTop: '0.2rem' },
+const s = {
+  section: { background: '#4361ee', borderTop: '2px solid #0a0a0a', borderBottom: '2px solid #0a0a0a', padding: '5rem 2.5rem' },
+  inner: { maxWidth: '1000px', margin: '0 auto' },
+  title: { fontSize: '2rem', fontWeight: 800, color: '#fff', letterSpacing: '-1px', marginBottom: '2.5rem' },
+  grid: { display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1px', background: '#fff' },
+  col: { background: '#4361ee', padding: '2rem' },
+  colTitle: { fontFamily: "'Space Mono', monospace", fontSize: '0.62rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1.5rem', paddingBottom: '0.8rem', borderBottom: '1px solid rgba(255,255,255,0.15)' },
+  row: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.55rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' },
+  name: { fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500 },
+  dot: { width: '6px', height: '6px', borderRadius: '50%' },
 }

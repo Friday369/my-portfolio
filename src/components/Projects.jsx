@@ -1,52 +1,76 @@
 const projects = [
   {
-    num: '01',
-    title: 'Portfolio Site',
-    desc: 'This very site — built in a day with React and deployed on Vercel.',
-    tags: ['React', 'CSS', 'Vercel'],
-    link: '#',
+    num: '001', title: 'SpendWise', year: '2025',
+    desc: 'Full stack expense tracker with user authentication, MongoDB database, analytics dashboard, category breakdowns, transaction history with search & filters, and a settings page. Built end-to-end from scratch in under a week.',
+    stack: ['REACT', 'NODE.JS', 'EXPRESS', 'MONGODB', 'JWT', 'VERCEL', 'RENDER'],
+    live: 'https://your-spendwise.vercel.app',
+    github: 'https://github.com/Friday369/expense-tracker',
+    color: '#ffe033',
   },
   {
-    num: '02',
-    title: 'Expense Tracker',
-    desc: 'A simple expense tracker built with React and Node.js that allows users to log and categorize their expenses.',
-    tags: ['React', 'Node.js'],
-    link: 'https://expense-tracker-fawn-zeta-81.vercel.app/',
+    num: '002', title: 'Portfolio Site', year: '2025',
+    desc: 'Personal portfolio built and deployed in a single day. Clean design with modular React components, smooth scroll sections, working contact form. Auto-deploys via GitHub pushes to Vercel.',
+    stack: ['REACT', 'CSS', 'VITE', 'VERCEL'],
+    live: 'https://your-portfolio.vercel.app',
+    github: 'https://github.com/Friday369/my-portfolio',
+    color: '#c8b4fa',
   },
 ]
 
 export default function Projects() {
   return (
-    <section id="projects" style={styles.section}>
-      <p style={styles.label}>Projects</p>
-      <div style={styles.grid}>
-        {projects.map((p) => (
-          <div key={p.num} style={styles.card}>
-            <div style={styles.num}>{p.num} — 2025</div>
-            <div style={styles.title}>{p.title}</div>
-            <div style={styles.desc}>{p.desc}</div>
-            <div style={styles.tags}>
-              {p.tags.map((t) => (
-                <span key={t} style={styles.pill}>{t}</span>
-              ))}
-            </div>
-            <a href={p.link} style={styles.link}>View Project →</a>
-          </div>
-        ))}
+    <section id="projects" style={s.section}>
+      <div style={s.header}>
+        <div>
+          <div style={s.label}>Selected Work</div>
+          <div style={s.title}>Projects</div>
+        </div>
+        <div style={s.bigNum}>02</div>
       </div>
+      {projects.map((p) => (
+        <div key={p.num} style={s.project}>
+          <div style={s.body}>
+            <div style={s.top}>
+              <span style={s.idx}>{p.num}</span>
+              <span style={s.name}>{p.title}</span>
+              <span style={s.badge}>LIVE ●</span>
+            </div>
+            <div style={s.desc}>{p.desc}</div>
+            <div style={s.stack}>
+              {p.stack.map(t => <span key={t} style={s.tag}>{t}</span>)}
+            </div>
+          </div>
+          <div style={{ ...s.side, background: p.color }}>
+            <span style={s.year}>{p.year}</span>
+            <div style={s.links}>
+              <a href={p.live} target="_blank" rel="noreferrer" style={s.linkMain}>Live ↗</a>
+              <a href={p.github} target="_blank" rel="noreferrer" style={s.link}>GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      ))}
     </section>
   )
 }
 
-const styles = {
-  section: { padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto' },
-  label: { fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#5a5678', marginBottom: '2rem' },
-  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' },
-  card: { background: '#13121f', border: '0.5px solid #2a2840', borderRadius: '12px', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' },
-  num: { fontSize: '0.72rem', color: '#4a4670', letterSpacing: '0.1em' },
-  title: { fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', color: '#e0dcf8' },
-  desc: { fontSize: '0.83rem', color: '#6a6688', lineHeight: 1.7 },
-  tags: { display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '0.5rem' },
-  pill: { fontSize: '0.7rem', background: '#1e1c30', color: '#8b82d4', border: '0.5px solid #3d3670', padding: '0.25rem 0.65rem', borderRadius: '20px' },
-  link: { fontSize: '0.83rem', color: '#9b8de8', textDecoration: 'none', marginTop: '0.5rem' },
+const s = {
+  section: { maxWidth: '1000px', margin: '0 auto', padding: '5rem 2.5rem' },
+  header: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2.5rem', paddingBottom: '1rem', borderBottom: '2px solid #0a0a0a' },
+  label: { fontFamily: "'Space Mono', monospace", fontSize: '0.65rem', color: '#888', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.4rem' },
+  title: { fontSize: '2rem', fontWeight: 800, color: '#0a0a0a', letterSpacing: '-1px' },
+  bigNum: { fontSize: '3.5rem', fontWeight: 800, color: '#e8e3db', letterSpacing: '-2px' },
+  project: { border: '2px solid #0a0a0a', marginBottom: '12px', display: 'grid', gridTemplateColumns: '1fr auto' },
+  body: { padding: '2rem' },
+  top: { display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '0.8rem' },
+  idx: { fontFamily: "'Space Mono', monospace", fontSize: '0.65rem', color: '#888' },
+  name: { fontSize: '1.5rem', fontWeight: 800, color: '#0a0a0a', letterSpacing: '-0.5px' },
+  badge: { fontFamily: "'Space Mono', monospace", fontSize: '0.6rem', background: '#4ade80', color: '#0a0a0a', padding: '0.2rem 0.6rem', fontWeight: 700, border: '1px solid #0a0a0a' },
+  desc: { fontSize: '0.83rem', color: '#555', lineHeight: 1.8, marginBottom: '1rem', maxWidth: '540px' },
+  stack: { display: 'flex', flexWrap: 'wrap', gap: '6px' },
+  tag: { fontFamily: "'Space Mono', monospace", fontSize: '0.62rem', color: '#0a0a0a', border: '1px solid #0a0a0a', padding: '0.2rem 0.6rem', background: '#f5f0e8' },
+  side: { borderLeft: '2px solid #0a0a0a', padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-end', minWidth: '120px' },
+  year: { fontFamily: "'Space Mono', monospace", fontSize: '0.65rem', color: '#0a0a0a', opacity: 0.5 },
+  links: { display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'flex-end' },
+  linkMain: { fontFamily: "'Space Mono', monospace", fontSize: '0.65rem', color: '#0a0a0a', textDecoration: 'none', fontWeight: 700 },
+  link: { fontFamily: "'Space Mono', monospace", fontSize: '0.65rem', color: '#0a0a0a', textDecoration: 'none', opacity: 0.5 },
 }
