@@ -110,6 +110,6 @@ code {
   background: var(--code-bg);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Bricolage Grotesque', sans-serif; background: #f5f0e8; overflow-x: hidden; width: 100%; }
+html, body { overflow-x: hidden; width: 100%; }
+body { font-family: 'Bricolage Grotesque', sans-serif; background: #f5f0e8; }
 input, select, textarea, button { font-family: 'Bricolage Grotesque', sans-serif; }
-html { overflow-x: hidden; }

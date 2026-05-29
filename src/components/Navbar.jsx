@@ -14,9 +14,9 @@ export default function Navbar() {
 }
 
 const s = {
-  nav: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.2rem 4rem', background: 'rgba(245,240,232,0.97)', borderBottom: '2px solid #0a0a0a', position: 'sticky', top: 0, zIndex: 100, backdropFilter: 'blur(10px)', width: '100%', boxSizing: 'border-box' },
-  logo: { fontFamily: "'Space Mono', monospace", fontSize: '0.82rem', fontWeight: 700, color: '#0a0a0a', letterSpacing: '0.05em' },
-  links: { display: 'flex', gap: '2rem', alignItems: 'center' },
-  link: { fontSize: '0.8rem', color: '#0a0a0a', textDecoration: 'none', fontWeight: 500 },
-  btn: { background: '#0a0a0a', color: '#f5f0e8', border: 'none', padding: '0.5rem 1.4rem', fontSize: '0.8rem', fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 700, cursor: 'pointer', textDecoration: 'none' },
+  nav: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.2rem 2rem', background: 'rgba(245,240,232,0.97)', borderBottom: '2px solid #0a0a0a', position: 'sticky', top: 0, zIndex: 100, backdropFilter: 'blur(10px)', width: '100%' },
+  logo: { fontFamily: "'Space Mono', monospace", fontSize: '0.82rem', fontWeight: 700, color: '#0a0a0a' },
+  links: { display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' },
+  link: { fontSize: '0.78rem', color: '#0a0a0a', textDecoration: 'none', fontWeight: 500 },
+  btn: { background: '#0a0a0a', color: '#f5f0e8', padding: '0.45rem 1rem', fontSize: '0.78rem', fontWeight: 700, cursor: 'pointer', textDecoration: 'none' },
 }

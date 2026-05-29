@@ -39,12 +39,16 @@ export default function Projects() {
             <div style={s.stack}>
               {p.stack.map(t => <span key={t} style={s.tag}>{t}</span>)}
             </div>
+            <div style={s.mobileLinks}>
+              <a href={p.live} target="_blank" rel="noreferrer" style={s.linkMain}>Live ↗</a>
+              <a href={p.github} target="_blank" rel="noreferrer" style={s.linkSec}>GitHub ↗</a>
+            </div>
           </div>
           <div style={{ ...s.side, background: p.color }}>
             <span style={s.year}>{p.year}</span>
             <div style={s.links}>
               <a href={p.live} target="_blank" rel="noreferrer" style={s.linkMain}>Live ↗</a>
-              <a href={p.github} target="_blank" rel="noreferrer" style={s.link}>GitHub ↗</a>
+              <a href={p.github} target="_blank" rel="noreferrer" style={s.linkSec}>GitHub ↗</a>
             </div>
           </div>
         </div>
@@ -54,23 +58,24 @@ export default function Projects() {
 }
 
 const s = {
-  section: { margin: '0 auto', padding: '5rem 4rem' },
-  header: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2.5rem', paddingBottom: '1rem', borderBottom: '2px solid #0a0a0a' },
+  section: { width: '100%', padding: '4rem 2rem' },
+  header: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem', paddingBottom: '1rem', borderBottom: '2px solid #0a0a0a' },
   label: { fontFamily: "'Space Mono', monospace", fontSize: '0.65rem', color: '#888', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.4rem' },
   title: { fontSize: '2rem', fontWeight: 800, color: '#0a0a0a', letterSpacing: '-1px' },
-  bigNum: { fontSize: '3.5rem', fontWeight: 800, color: '#e8e3db', letterSpacing: '-2px' },
-  project: { border: '2px solid #0a0a0a', marginBottom: '12px', display: 'grid', gridTemplateColumns: '1fr auto' },
-  body: { padding: '2rem' },
-  top: { display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '0.8rem' },
+  bigNum: { fontSize: '3rem', fontWeight: 800, color: '#e8e3db', letterSpacing: '-2px' },
+  project: { border: '2px solid #0a0a0a', marginBottom: '12px', display: 'flex', flexWrap: 'wrap' },
+  body: { padding: '1.5rem', flex: 1, minWidth: 0 },
+  top: { display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.8rem', flexWrap: 'wrap' },
   idx: { fontFamily: "'Space Mono', monospace", fontSize: '0.65rem', color: '#888' },
-  name: { fontSize: '1.5rem', fontWeight: 800, color: '#0a0a0a', letterSpacing: '-0.5px' },
+  name: { fontSize: '1.3rem', fontWeight: 800, color: '#0a0a0a', letterSpacing: '-0.5px' },
   badge: { fontFamily: "'Space Mono', monospace", fontSize: '0.6rem', background: '#4ade80', color: '#0a0a0a', padding: '0.2rem 0.6rem', fontWeight: 700, border: '1px solid #0a0a0a' },
-  desc: { fontSize: '0.83rem', color: '#555', lineHeight: 1.8, marginBottom: '1rem', maxWidth: '540px' },
-  stack: { display: 'flex', flexWrap: 'wrap', gap: '6px' },
+  desc: { fontSize: '0.83rem', color: '#555', lineHeight: 1.8, marginBottom: '1rem' },
+  stack: { display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '1rem' },
   tag: { fontFamily: "'Space Mono', monospace", fontSize: '0.62rem', color: '#0a0a0a', border: '1px solid #0a0a0a', padding: '0.2rem 0.6rem', background: '#f5f0e8' },
-  side: { borderLeft: '2px solid #0a0a0a', padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-end', minWidth: '120px' },
+  mobileLinks: { display: 'flex', gap: '1rem' },
+  side: { borderLeft: '2px solid #0a0a0a', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-end', minWidth: '100px' },
   year: { fontFamily: "'Space Mono', monospace", fontSize: '0.65rem', color: '#0a0a0a', opacity: 0.5 },
   links: { display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'flex-end' },
   linkMain: { fontFamily: "'Space Mono', monospace", fontSize: '0.65rem', color: '#0a0a0a', textDecoration: 'none', fontWeight: 700 },
-  link: { fontFamily: "'Space Mono', monospace", fontSize: '0.65rem', color: '#0a0a0a', textDecoration: 'none', opacity: 0.5 },
+  linkSec: { fontFamily: "'Space Mono', monospace", fontSize: '0.65rem', color: '#0a0a0a', textDecoration: 'none', opacity: 0.5 },
 }

@@ -33,25 +33,26 @@ function SkillCol({ title, items }) {
 export default function Skills() {
   return (
     <section id="skills" style={s.section}>
-      <div style={s.inner}>
+      <div style={s.titleRow}>
         <div style={s.title}>Skills & Tools</div>
-        <div style={s.grid}>
-          <SkillCol title="Technical" items={technical} />
-          <SkillCol title="Languages" items={languages} />
-          <SkillCol title="Soft Skills" items={soft} />
-        </div>
+      </div>
+      <div style={s.grid}>
+        <SkillCol title="Technical" items={technical} />
+        <SkillCol title="Languages" items={languages} />
+        <SkillCol title="Soft Skills" items={soft} />
       </div>
     </section>
   )
 }
 
 const s = {
-  section: { background: '#4361ee', borderTop: '2px solid #0a0a0a', borderBottom: '2px solid #0a0a0a', padding: '5rem 4rem' },
-  title: { fontSize: '2rem', fontWeight: 800, color: '#fff', letterSpacing: '-1px', marginBottom: '2.5rem' },
-  grid: { display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1px', background: '#fff' },
-  col: { background: '#4361ee', padding: '2rem' },
-  colTitle: { fontFamily: "'Space Mono', monospace", fontSize: '0.62rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1.5rem', paddingBottom: '0.8rem', borderBottom: '1px solid rgba(255,255,255,0.15)' },
-  row: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.55rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' },
-  name: { fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500 },
-  dot: { width: '6px', height: '6px', borderRadius: '50%' },
+  section: { background: '#4361ee', borderTop: '2px solid #0a0a0a', borderBottom: '2px solid #0a0a0a', padding: '4rem 2rem', width: '100%' },
+  titleRow: { marginBottom: '2rem' },
+  title: { fontSize: '2rem', fontWeight: 800, color: '#fff', letterSpacing: '-1px' },
+  grid: { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: '#fff' },
+  col: { background: '#4361ee', padding: '1.5rem' },
+  colTitle: { fontFamily: "'Space Mono', monospace", fontSize: '0.62rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1.2rem', paddingBottom: '0.8rem', borderBottom: '1px solid rgba(255,255,255,0.15)' },
+  row: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.5rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' },
+  name: { fontSize: '0.82rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500 },
+  dot: { width: '6px', height: '6px', borderRadius: '50%', flexShrink: 0 },
 }
