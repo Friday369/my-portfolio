@@ -1,20 +1,19 @@
 const projects = [
   {
-    num: '001', name: 'SpendWise', year: '2025',
-    desc: 'Full stack expense tracker with user authentication, MongoDB database, analytics dashboard with bar charts, category breakdowns, transaction history with search and filters, and a complete settings page. Built end-to-end from scratch in under a week.',
-    stack: ['REACT', 'NODE.JS', 'EXPRESS', 'MONGODB', 'JWT AUTH', 'VERCEL', 'RENDER'],
-    live: 'https://your-spendwise.vercel.app',
-    github: 'https://github.com/Friday369/expense-tracker',
-    color: '#ffe033',
-  },
-  {
-    num: '002', name: 'Portfolio Site', year: '2025',
-    desc: 'Personal portfolio with multiple pages, holographic hero effects, cinematic fade+scale page transitions, and bold colorful design. Modular React components. Auto-deploys via GitHub pushes to Vercel.',
+    num: '001', name: 'Portfolio Site', year: '2025',
+    desc: 'This very website.Personal portfolio with multiple pages, holographic hero effects, cinematic fade+scale page transitions, and bold colorful design. Modular React components. Auto-deploys via GitHub pushes to Vercel.',
     stack: ['REACT', 'CSS', 'VITE', 'VERCEL'],
-    live: 'https://your-portfolio.vercel.app',
     github: 'https://github.com/Friday369/my-portfolio',
     color: '#c8b4fa',
   },
+  {
+    num: '002', name: 'SpendWise', year: '2025',
+    desc: 'Full stack expense tracker with user authentication, MongoDB database, analytics dashboard with bar charts, category breakdowns, transaction history with search and filters, and a complete settings page. Built end-to-end from scratch in under a week.',
+    stack: ['REACT', 'NODE.JS', 'EXPRESS', 'MONGODB', 'JWT AUTH', 'VERCEL', 'RENDER'],
+    live: 'https://expense-tracker-fawn-zeta-81.vercel.app/dashboard',
+    github: 'https://github.com/Friday369/expense-tracker',
+    color: '#ffe033',
+  }
 ]
 
 export default function Work() {
