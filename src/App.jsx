@@ -1,29 +1,24 @@
-import Hero from './components/Hero'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
+import { useState } from 'react'
 import Navbar from './components/Navbar'
-import Ticker from './components/Ticker'
-import About from './components/About'
+import Home from './pages/Home'
+import Work from './pages/Work'
+import Skills from './pages/Skills'
+import About from './pages/About'
+import Contact from './pages/Contact'
 
 export default function App() {
+  const [page, setPage] = useState('home')
+
   return (
-    <div style={{ background: '#f5f0e8', minHeight: '100vh', fontFamily: "'Bricolage Grotesque', sans-serif", width: '100%', overflowX: 'hidden' }}>
-      <Navbar />
-      <Hero />
-      <Ticker />
-      <Projects />
-      <Skills />
-      <About />
-      <Contact />
-      <footer style={s.footer}>
-        <span>© 2025 C.S. NARENDRA — ALL RIGHTS RESERVED</span>
-        <span>BUILT WITH REACT · DEPLOYED ON VERCEL</span>
-      </footer>
+    <div style={{ width: '100%', minHeight: '100vh', background: '#f5f0e8', overflowX: 'hidden' }}>
+      <Navbar page={page} setPage={setPage} />
+      <div style={{ paddingTop: '54px' }}>
+        {page === 'home' && <Home setPage={setPage} />}
+        {page === 'work' && <Work />}
+        {page === 'skills' && <Skills />}
+        {page === 'about' && <About />}
+        {page === 'contact' && <Contact />}
+      </div>
     </div>
   )
-}
-
-const s = {
-  footer: { background: '#0a0a0a', padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: "'Space Mono', monospace", fontSize: '0.62rem', color: '#444', letterSpacing: '0.08em', width: '100%', flexWrap: 'wrap', gap: '0.5rem' },
 }
