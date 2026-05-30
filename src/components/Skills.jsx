@@ -48,11 +48,11 @@ export default function Skills() {
 const s = {
   section: { background: '#4361ee', borderTop: '2px solid #0a0a0a', borderBottom: '2px solid #0a0a0a', padding: '4rem 2rem', width: '100%' },
   titleRow: { marginBottom: '2rem' },
-  title: { fontSize: '2rem', fontWeight: 800, color: '#fff', letterSpacing: '-1px' },
-  grid: { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: '#fff' },
-  col: { background: '#4361ee', padding: '1.5rem' },
-  colTitle: { fontFamily: "'Space Mono', monospace", fontSize: '0.62rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1.2rem', paddingBottom: '0.8rem', borderBottom: '1px solid rgba(255,255,255,0.15)' },
+  title: { fontSize: '2rem', fontWeight: 800, color: '#fff', letterSpacing: '-1px', textAlign: 'center' },
+  grid: { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0', background: 'rgba(255,255,255,0.2)', border: '1px solid rgba(255,255,255,0.2)' },
+  col: { background: '#4361ee', padding: '1.5rem 1rem', borderRight: '1px solid rgba(255,255,255,0.2)' },
+  colTitle: { fontFamily: "'Space Mono', monospace", fontSize: '0.6rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1.2rem', paddingBottom: '0.8rem', borderBottom: '1px solid rgba(255,255,255,0.15)', textAlign: 'center' },
   row: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.5rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' },
-  name: { fontSize: '0.82rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500 },
+  name: { fontSize: '0.78rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500, paddingRight: '8px' },
   dot: { width: '6px', height: '6px', borderRadius: '50%', flexShrink: 0 },
 }

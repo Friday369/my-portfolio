@@ -1,9 +1,11 @@
 export default function Hero() {
   return (
     <section style={s.hero}>
-      <div style={s.tag}>
-        <span style={s.dot}></span>
-        Available for work · India · Remote
+      <div style={s.tagWrap}>
+        <div style={s.tag}>
+          <span style={s.dot}></span>
+          Available for work · India · Remote
+        </div>
       </div>
       <h1 style={s.title}>
         I Build<br />
@@ -23,14 +25,15 @@ export default function Hero() {
 
 const s = {
   hero: { padding: '3rem 2rem 0', width: '100%' },
-  tag: { display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#0a0a0a', color: '#f5f0e8', fontFamily: "'Space Mono', monospace", fontSize: '0.68rem', padding: '0.4rem 1rem', marginBottom: '2rem', letterSpacing: '0.1em' },
+  tagWrap: { display: 'flex', justifyContent: 'center', marginBottom: '2rem' },
+  tag: { display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#0a0a0a', color: '#f5f0e8', fontFamily: "'Space Mono', monospace", fontSize: '0.68rem', padding: '0.4rem 1rem', letterSpacing: '0.1em' },
   dot: { width: '6px', height: '6px', borderRadius: '50%', background: '#4ade80', display: 'inline-block', flexShrink: 0 },
-  title: { fontSize: 'clamp(3rem, 12vw, 9rem)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-3px', color: '#0a0a0a', marginBottom: '1rem' },
+  title: { fontSize: 'clamp(3rem, 12vw, 9rem)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-3px', color: '#0a0a0a', marginBottom: '1rem', textAlign: 'center' },
   yellow: { background: '#ffe033', padding: '0 8px' },
   coral: { background: '#ff6b4a', color: '#fff', padding: '0 8px' },
-  bottom: { display: 'flex', flexDirection: 'column', gap: '1.5rem', padding: '2rem 0', borderTop: '2px solid #0a0a0a', marginTop: '1.5rem' },
-  desc: { fontSize: '0.9rem', color: '#444', lineHeight: 1.8, fontWeight: 400 },
-  btns: { display: 'flex', gap: '10px', flexWrap: 'wrap' },
+  bottom: { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '2rem 0', borderTop: '2px solid #0a0a0a', marginTop: '1.5rem' },
+  desc: { fontSize: '0.9rem', color: '#444', lineHeight: 1.8, fontWeight: 400, textAlign: 'center', maxWidth: '500px' },
+  btns: { display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'center' },
   btnA: { background: '#ffe033', color: '#0a0a0a', border: '2px solid #0a0a0a', padding: '0.8rem 2rem', fontSize: '0.85rem', fontWeight: 700, cursor: 'pointer', textDecoration: 'none', display: 'inline-block' },
   btnB: { background: 'transparent', color: '#0a0a0a', border: '2px solid #0a0a0a', padding: '0.8rem 2rem', fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer', textDecoration: 'none', display: 'inline-block' },
 }
