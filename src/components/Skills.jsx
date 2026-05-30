@@ -33,13 +33,41 @@ function SkillCol({ title, items }) {
 export default function Skills() {
   return (
     <section id="skills" style={s.section}>
-      <div style={s.titleRow}>
-        <div style={s.title}>Skills & Tools</div>
-      </div>
-      <div style={s.grid}>
-        <SkillCol title="Technical" items={technical} />
-        <SkillCol title="Languages" items={languages} />
-        <SkillCol title="Soft Skills" items={soft} />
+      <style>{`
+        @media (max-width: 640px) {
+          .skills-grid { grid-template-columns: 1fr !important; }
+          .skills-col { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.2); }
+        }
+      `}</style>
+      <div style={s.title}>Skills & Tools</div>
+      <div className="skills-grid" style={s.grid}>
+        <div className="skills-col" style={s.col}>
+          <div style={s.colTitle}>Technical</div>
+          {technical.map(i => (
+            <div key={i.name} style={s.row}>
+              <span style={s.name}>{i.name}</span>
+              <span style={{ ...s.dot, background: dotColor(i.level) }}></span>
+            </div>
+          ))}
+        </div>
+        <div className="skills-col" style={s.col}>
+          <div style={s.colTitle}>Languages</div>
+          {languages.map(i => (
+            <div key={i.name} style={s.row}>
+              <span style={s.name}>{i.name}</span>
+              <span style={{ ...s.dot, background: dotColor(i.level) }}></span>
+            </div>
+          ))}
+        </div>
+        <div className="skills-col" style={s.col}>
+          <div style={s.colTitle}>Soft Skills</div>
+          {soft.map(i => (
+            <div key={i.name} style={s.row}>
+              <span style={s.name}>{i.name}</span>
+              <span style={{ ...s.dot, background: dotColor(i.level) }}></span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -47,12 +75,11 @@ export default function Skills() {
 
 const s = {
   section: { background: '#4361ee', borderTop: '2px solid #0a0a0a', borderBottom: '2px solid #0a0a0a', padding: '4rem 2rem', width: '100%' },
-  titleRow: { marginBottom: '2rem' },
-  title: { fontSize: '2rem', fontWeight: 800, color: '#fff', letterSpacing: '-1px', textAlign: 'center' },
-  grid: { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0', background: 'rgba(255,255,255,0.2)', border: '1px solid rgba(255,255,255,0.2)' },
+  title: { fontSize: '2rem', fontWeight: 800, color: '#fff', letterSpacing: '-1px', textAlign: 'center', marginBottom: '2rem' },
+  grid: { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', border: '1px solid rgba(255,255,255,0.2)' },
   col: { background: '#4361ee', padding: '1.5rem 1rem', borderRight: '1px solid rgba(255,255,255,0.2)' },
   colTitle: { fontFamily: "'Space Mono', monospace", fontSize: '0.6rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1.2rem', paddingBottom: '0.8rem', borderBottom: '1px solid rgba(255,255,255,0.15)', textAlign: 'center' },
-  row: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.5rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' },
-  name: { fontSize: '0.78rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500, paddingRight: '8px' },
-  dot: { width: '6px', height: '6px', borderRadius: '50%', flexShrink: 0 },
+  row: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.6rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' },
+  name: { fontSize: '0.82rem', color: 'rgba(255,255,255,0.85)', fontWeight: 500 },
+  dot: { width: '8px', height: '8px', borderRadius: '50%', flexShrink: 0 },
 }
